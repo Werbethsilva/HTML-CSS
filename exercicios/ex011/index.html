@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinamicas</h1>
+    <p>Essas são as imagens de todos os tamanhos para celular, tablete e pc confira.</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagens/P.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="imagens/M.png" type="image/png">
+        <img src="imagens/G.png" alt="imagen G">
+    </picture>
+    <h1>Reproduzindo audios</h1>
+    <p>Vamos aprender a reproduzir audios em HTML5</p>
+    <audio preload="metadata"autoplay controls loop>
+        <source src="Midia/musica 1.mp3" type="audio/mpeg">
+        <source src="Midia/musica 1.ogg" type="audio/ogg">     <!-- essa tbm e uma maneira de por audios so q fica limitado <audio src="" controls autoplay></audio>-->
+        <source src="Midia/musica 1.wav" type="audio/wav">     <!--tentar evitar arquivo wav-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio <a href="Midia/musica 1.mp3">Clique aqui para baixar o arquivo</a></p>
+    </audio>                                                 
+</body>
+</html>

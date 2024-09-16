@@ -1,0 +1,203 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  
+@font-face {
+    font-family:"android" ;
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0:#c5ebd6;
+    --cor1:#83E1AD;
+    --cor2:#3DDC84;
+    --cor3:#2FA866;        /*isso é uma var, isso vai min ajudar muito */
+    --cor4:#1A5C37;
+    --cor5:#063d1e;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque:"Bebas Neue", sans-serif;           /*isso é uma var*/
+    --font-android:'android',sans-serif;
+}
+
+* {
+    margin: 0px;        /*isso é um var*/
+    padding: 0px;       /*para tira todas as margens do site, ou espaços*/
+}
+
+header {
+    background-image: linear-gradient(to bottom,var(--cor3), var(--cor5));   /*degrader de cima pra baixo*/
+    text-align: center;         /*para deixar o texto no centro da dela*/
+    padding-top: 40px;          /*tem um funcionamento muito similar ao do margin, porém ao invés de dar uma espaçamento externo, ele da uma interno. */
+    min-height: 150px;
+}
+
+header > h1 {
+    font-family: var(--font-destaque);  /*a fonte q vou usar*/
+    margin-bottom: 17px;      /*distanciamento de um titulo pro outro ou de um paragrafo pro outro*/
+    font-size: 2.7em;        /*tamanho das letras*/
+    font-weight: normal;
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.78);         /*para da uma sombra pro texto*/
+ }
+ 
+ header > h2 {
+    font-family: var(--font-padrao);
+    font-size: 1.3em;     /*tamanho das letras*/
+    color: white; 
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
+
+ }
+
+body {
+    background-color:var(--cor1);   /*para da a cor central ao site*/
+    font-family:var(--font-padrao) ;
+}
+
+a.externo::after {                  /*para adicionar alguma coisa depois do link ex: emoji*/ 
+    content:'\00A0\1F517';          /*para por emoji*/
+}
+
+p {
+    margin: 15px 0px;
+    text-align: justify;           /*para deixar o texto alinhado*/
+    text-indent: 30px;             /*para um levi espaçamento no inicio do texto*/
+    line-height: 1.5em;              /*para na ter espaço entre uma linha e outra*/
+    font-size: 1em;
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 7px;               /*para dar margens interna*/
+    box-shadow:0px 7px 7px rgba(0, 0, 0, 0.602) ;
+}
+
+nav > a {
+    text-decoration: none;    /*para perder a decoração do texto*/
+    color:var(--cor1) ;
+    font-weight: bold;      /*para deixar em negrito*/
+    padding: 10px;          /*para dar margens interna*/
+    transition-duration: .4s;
+}
+
+nav > a:hover {
+    background-color: var(--cor3);      /*para quando eu passar o mouse ter uma ação em links, visite, active e etc... */
+    color: var(--cor5);                 /*a cor da ação do mouse*/
+}
+
+main {
+    background-color:var(--cor0);        /*cor principal dessa caixa*/
+    min-width: 300px;                    /*largura minima*/
+    max-width: 1000px;                   /*largura maxima*/       
+    margin: auto;                        /*para deixar no centro*/
+    margin-bottom: 30px;                 /*distanciamento de um titulo pro outro ou de um paragrafo pro outro*/
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.404);  /*sombras da caixa*/
+    border-bottom-left-radius: 10px;                  /**/
+    border-bottom-right-radius: 10px;
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;              /*para deixar em negrito*/
+}
+
+main a {
+    text-decoration: none;          /*para tira a decoraçao do texto*/
+    font-weight: bold;              /*para deixar em negrito*/
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;               /*para dar margens interna*/   
+
+}
+
+main a:hover {                  /*para ação com mouse*/
+    text-decoration: underline; /*para dar decoração para o texto*/
+    color: var(--cor4);
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;           /*para o tamanho da imagen*/
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    margin: 0px -20px 30px;
+    padding: 20px;                  /*para deixar meu video responsivo*/
+    padding-bottom: 57%;
+    position: relative;
+}  
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;                      /*para eu ter controle abisoluto nesta caixa*/
+    width: 90%;
+    height: 90%;
+}
+
+article > h1 {
+    color:var(--cor5);
+    font-weight: normal;
+    font-family:var(--font-android);
+
+}
+
+article > h2 {
+    color: var(--cor4);
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.3em;       /*para o tamanho do texto*/
+    text-indent: 8px;       /*para dar um leve espaçamento no texto*/
+    background-image: linear-gradient(to right,var(--cor1),transparent)     /*para degrader de cores*/
+}
+
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;        /*para dar uma aredondada nas bordas */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.261);
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;              /*margen negativa si você quiser deixa bem em caixada,emcima na direita e na esquerda em baixo nao tem margen negativa */
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-type:'\2705\00A0';
+    list-style-position: inside;        /*para posicionar a lista*/
+    columns: 2;
+}
+
+footer > p {
+    text-align: center;  /*para deixar o texto no centro*/
+    background-color: var(--cor4);
+    color: rgb(255, 255, 253);
+    font-size: 0.9em;
+    padding: 4px;
+}
+
+footer a {               /*usar assim para quando o link estiver dentro de um paragrafo sem hover*/
+    text-decoration: none;           /*para tira a decoraçao do texto*/
+    color: white;
+    font-weight: bold;       /*para deixar em negrito*/
+}
+
+footer a:hover {          /*usar assim para quando o link estiver dentro de um paragrafo com hover*/
+    text-decoration:underline;          /*para dar decoração para o texto*/
+    color: var(--cor1);
+}
